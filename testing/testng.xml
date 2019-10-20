@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="5" name="Test">
-  	<classes>
-  		<class name="deepak.testing.AppTest"></class>
-  	</classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+	<test name="Chrome">
+		<parameter name="browser" value="chrome"/>
+		<parameter name="spreadsheetId" value="1Mq6zIWcGt93I3joF8eQBvi_cGsO7TAowU6sS3hbHSz8" />
+		<classes>
+			<class name="deepak.dataprovider.SpreadsheetTestDataProvider" />
+			<class name="deepak.testing.AppTest" />
+		</classes>
+	</test>
+	<test name="Firefox">
+		<parameter name="browser" value="firefox"/>
+		<parameter name="spreadsheetId" value="1Mq6zIWcGt93I3joF8eQBvi_cGsO7TAowU6sS3hbHSz8" />
+		<classes>
+			<class name="deepak.dataprovider.SpreadsheetTestDataProvider" />
+			<class name="deepak.testing.AppTest" />
+		</classes>
+	</test>
+</suite>  
